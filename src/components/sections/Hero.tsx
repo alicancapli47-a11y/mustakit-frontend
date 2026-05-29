@@ -4,28 +4,28 @@ import Link from 'next/link'
 
 const slides = [
   {
-    img: '/images/slide1.jpg',
+    img: '/images/slide1.jpeg',
     badge: '🏗️ Müstakil ev yaptırmanın yeni yolu',
     title: 'Tekele değil,',
     highlight: 'ustana güven.',
     desc: 'Mimardan ustaya, malzemeciden tesisatçıya — tüm inşaat sürecini şeffaf, güvenli ve aracısız yönet.',
   },
   {
-    img: '/images/slide2.jpg',
+    img: '/images/slide2.jpeg',
     badge: '🌿 Anadolu\'nun her köşesinde',
     title: 'Arsanız var,',
     highlight: 'hayaliniz de.',
     desc: 'Boş arsan artık yük değil, fırsat. Müstakit ile doğru ustayı bul, projeye başla.',
   },
   {
-    img: '/images/slide3.jpg',
+    img: '/images/slide3.jpeg',
     badge: '👷 Güvenilir ustalar',
     title: 'İşini bilen',
     highlight: 'ellere teslim et.',
     desc: 'Tüm ustalar kimlik doğrulamalı, referanslı ve Müstakit güvencesi altında.',
   },
   {
-    img: '/images/slide4.jpg',
+    img: '/images/slide4.jpeg',
     badge: '🏠 Hayaller gerçek olur',
     title: 'Evin hazır,',
     highlight: 'ailen mutlu.',
@@ -54,12 +54,10 @@ export function Hero() {
           style={{
             backgroundImage: `url('${s.img}')`,
             opacity: i === current ? 1 : 0,
-            backgroundColor: i === current ? '#1a1a1a' : '#1a1a1a',
           }}
         />
       ))}
 
-      {/* Fallback gradient background when no image */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-orange-900" style={{ zIndex: -1 }} />
 
       <div
@@ -85,14 +83,14 @@ export function Hero() {
           <div className="flex items-center gap-3 flex-wrap">
             <Link
               href="/giris"
-              className="font-semibold px-6 py-3 rounded-lg text-sm transition-colors text-white"
+              className="font-semibold px-6 py-3 rounded-lg text-sm text-white"
               style={{ background: '#F26419' }}
             >
               Ücretsiz Başla
             </Link>
             <Link
               href="/#nasil-calisir"
-              className="font-medium px-6 py-3 rounded-lg text-sm transition-colors"
+              className="font-medium px-6 py-3 rounded-lg text-sm"
               style={{ background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.3)', color: 'white' }}
             >
               Nasıl Çalışır?
@@ -106,7 +104,6 @@ export function Hero() {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className="slide-dot"
             style={{
               width: i === current ? '28px' : '8px',
               height: '8px',
