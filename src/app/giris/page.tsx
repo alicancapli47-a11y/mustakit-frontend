@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { signIn } from 'next-auth/react'
 import Link from 'next/link'
-import { Eye, EyeOff } from 'lucide-react'
+import { Eye, EyeOff, CheckCircle } from 'lucide-react'
 
 export default function GirisPage() {
   const [tab, setTab] = useState<'giris' | 'kayit'>('giris')
@@ -27,12 +27,15 @@ export default function GirisPage() {
         body: JSON.stringify(loginForm),
       })
       const data = await res.json()
-      if (!res.ok) return setError(data.error)
+      if (!res.ok) {
+        setError(data.error || 'Giriş başarısız')
+        return
+      }
       localStorage.setItem('token', data.token)
       localStorage.setItem('user', JSON.stringify(data.user))
       window.location.href = '/dashboard'
     } catch {
-      setError('Bir hata oluştu')
+      setError('Sunucuya bağlanılamadı')
     } finally {
       setLoading(false)
     }
@@ -41,10 +44,12 @@ export default function GirisPage() {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!registerForm.acceptedTerms || !registerForm.acceptedPrivacy) {
-      return setError('Sözleşmeleri kabul etmelisiniz')
+      setError('Sözleşmeleri kabul etmelisiniz')
+      return
     }
     setLoading(true)
     setError('')
+    setSuccess('')
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/email-auth/register`, {
         method: 'POST',
@@ -52,10 +57,14 @@ export default function GirisPage() {
         body: JSON.stringify({ ...registerForm, acceptedTerms: true }),
       })
       const data = await res.json()
-      if (!res.ok) return setError(data.error)
-      setSuccess('Doğrulama maili gönderildi! Lütfen e-postanızı kontrol edin.')
+      if (!res.ok) {
+        setError(data.error || 'Kayıt başarısız')
+        return
+      }
+      setSuccess('✅ Kayıt başarılı! Doğrulama maili gönderildi. E-postanızı kontrol edin.')
+      setRegisterForm({ name: '', email: '', password: '', phone: '', city: '', userType: 'ARSA_SAHIBI', acceptedTerms: false, acceptedPrivacy: false })
     } catch {
-      setError('Bir hata oluştu')
+      setError('Sunucuya bağlanılamadı')
     } finally {
       setLoading(false)
     }
@@ -79,8 +88,17 @@ export default function GirisPage() {
           </button>
         </div>
         <div className="p-8">
-          {error && <div className="bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3 rounded-lg mb-4">{error}</div>}
-          {success && <div className="bg-green-50 border border-green-200 text-green-700 text-sm px-4 py-3 rounded-lg mb-4">{success}</div>}
+          {error && (
+            <div className="bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3 rounded-lg mb-4">
+              {error}
+            </div>
+          )}
+          {success && (
+            <div className="bg-green-50 border border-green-200 text-green-700 text-sm px-4 py-3 rounded-lg mb-4 flex items-start gap-2">
+              <CheckCircle size={16} className="shrink-0 mt-0.5" />
+              <span>{success}</span>
+            </div>
+          )}
           <button onClick={() => signIn('google', { callbackUrl: '/dashboard' })}
             className="w-full flex items-center justify-center gap-3 border border-border rounded-lg px-4 py-3 text-sm font-medium hover:bg-surface transition-colors mb-5">
             <svg width="18" height="18" viewBox="0 0 18 18">
@@ -93,7 +111,7 @@ export default function GirisPage() {
           </button>
           <div className="flex items-center gap-3 mb-5">
             <div className="flex-1 h-px bg-border" />
-            <span className="text-xs text-muted">veya</span>
+            <span className="text-xs text-muted">veya e-posta ile</span>
             <div className="flex-1 h-px bg-border" />
           </div>
           {tab === 'giris' && (
@@ -196,7 +214,15 @@ export default function GirisPage() {
                 </label>
               </div>
               <button type="submit" disabled={loading} className="btn-primary w-full disabled:opacity-50">
-                {loading ? 'Kayıt olunuyor...' : 'Üye Ol'}
+                {loading ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"/>
+                    </svg>
+                    Kayıt olunuyor...
+                  </span>
+                ) : 'Üye Ol'}
               </button>
             </form>
           )}
