@@ -1,6 +1,5 @@
 'use client'
-import { signIn, useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import { Check } from 'lucide-react'
 
 const packages = [
@@ -52,17 +51,6 @@ const packages = [
 ]
 
 export function Packages() {
-  const { data: session } = useSession()
-  const router = useRouter()
-
-  const handleSelect = () => {
-    if (session) {
-      router.push('/dashboard')
-    } else {
-      signIn('google')
-    }
-  }
-
   return (
     <section id="paketler" className="py-20 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
@@ -73,14 +61,7 @@ export function Packages() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {packages.map((pkg, i) => (
-            <div
-              key={i}
-              className={`relative rounded-2xl border p-7 flex flex-col ${
-                pkg.featured
-                  ? 'border-primary bg-primary/5 shadow-card-hover'
-                  : 'border-border bg-white shadow-card'
-              }`}
-            >
+            <div key={i} className={`relative rounded-2xl border p-7 flex flex-col ${pkg.featured ? 'border-primary bg-primary/5 shadow-card-hover' : 'border-border bg-white shadow-card'}`}>
               {pkg.featured && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wide whitespace-nowrap">
                   En Popüler
@@ -92,26 +73,18 @@ export function Packages() {
                 <div className="font-head text-3xl font-extrabold text-primary mb-1">
                   {pkg.price} TL <span className="text-sm font-normal text-muted font-body">/ ay</span>
                 </div>
-                <div className="text-xs text-success font-semibold mb-6">+ {pkg.commission}</div>
+                <div className="text-xs text-green-600 font-semibold mb-6">+ {pkg.commission}</div>
                 <ul className="flex flex-col gap-3 mb-8">
                   {pkg.features.map((f, j) => (
                     <li key={j} className="flex items-start gap-2 text-sm text-gray-700">
-                      <Check size={14} className="text-success mt-0.5 shrink-0" />
-                      {f}
+                      <Check size={14} className="text-green-500 mt-0.5 shrink-0" />{f}
                     </li>
                   ))}
                 </ul>
               </div>
-              <button
-                onClick={handleSelect}
-                className={`w-full py-3 rounded-lg font-semibold text-sm transition-colors ${
-                  pkg.featured
-                    ? 'bg-primary text-white hover:bg-primary-dark'
-                    : 'border border-border text-gray-700 hover:bg-surface'
-                }`}
-              >
+              <Link href="/giris" className={`w-full py-3 rounded-lg font-semibold text-sm transition-colors text-center block ${pkg.featured ? 'bg-primary text-white hover:bg-orange-600' : 'border border-border text-gray-700 hover:bg-surface'}`}>
                 Bu Paketi Seç
-              </button>
+              </Link>
             </div>
           ))}
         </div>
