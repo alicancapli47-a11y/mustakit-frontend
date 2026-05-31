@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
           <div>
             <div className="font-head font-extrabold text-xl text-primary mb-3">Müstakit</div>
-            <p className="text-sm leading-relaxed">Tekele değil, ustana güven. Müstakil ev yaptırmanın en şeffaf yolu.</p>
+            <p className="text-sm leading-relaxed">Müstakil evinizi yaptırmanın en şeffaf yolu.</p>
           </div>
           <div>
             <div className="font-semibold text-white text-sm mb-4">Platform</div>

@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Mustakit - Tekele degil, ustana guven',
-  description: 'Mustakil ev yaptirmanin yeni yolu.',
+description: 'Müstakil evinizi yaptırmanın en şeffaf yolu. Mimar, usta ve malzemeciye aracısız ulaşın.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

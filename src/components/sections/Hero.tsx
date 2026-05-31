@@ -8,7 +8,7 @@ const slides = [
     badge: '🏗️ Müstakil ev yaptırmanın yeni yolu',
     title: 'Tekele değil,',
     highlight: 'ustana güven.',
-    desc: 'Mimardan ustaya, malzemeciden tesisatçıya — tüm inşaat sürecini şeffaf, güvenli ve aracısız yönet.',
+    desc: 'Müstakil evinizi yaptırmanın en şeffaf yolu. Mimar, usta ve malzemeciye aracısız ulaşın.'
   },
   {
     img: '/images/slide2.jpeg',
