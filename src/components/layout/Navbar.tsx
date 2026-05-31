@@ -28,6 +28,7 @@ export function Navbar() {
           <Link href="/#nasil-calisir" className="hover:text-primary transition-colors">Nasıl Çalışır</Link>
           <Link href="/#paketler" className="hover:text-primary transition-colors">Paketler</Link>
           <Link href="/uzmanlar" className="hover:text-primary transition-colors">Uzmanlar</Link>
+          <Link href="/mustakil-ev-maliyeti" className="hover:text-primary transition-colors">Maliyet Hesapla</Link>
           <Link href="/usta-kayit" className="hover:text-primary transition-colors">Usta Ol</Link>
         </div>
 
@@ -84,6 +85,7 @@ export function Navbar() {
           <Link href="/#nasil-calisir" className="text-sm font-medium py-2">Nasıl Çalışır</Link>
           <Link href="/#paketler" className="text-sm font-medium py-2">Paketler</Link>
           <Link href="/uzmanlar" className="text-sm font-medium py-2">Uzmanlar</Link>
+          <Link href="/mustakil-ev-maliyeti" className="text-sm font-medium py-2">Maliyet Hesapla</Link>
           <Link href="/usta-kayit" className="text-sm font-medium py-2">Usta Ol</Link>
           <div className="border-t border-border pt-3 flex flex-col gap-2">
             {user ? (
