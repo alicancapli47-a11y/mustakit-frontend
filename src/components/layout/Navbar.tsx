@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import { Menu, X, ChevronDown, LogOut, User, LayoutDashboard, Wrench } from 'lucide-react'
+import { Menu, X, ChevronDown, LogOut, LayoutDashboard, Wrench, Shield } from 'lucide-react'
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -27,7 +27,6 @@ export function Navbar() {
         <div className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
           <Link href="/#nasil-calisir" className="hover:text-primary transition-colors">Nasıl Çalışır</Link>
           <Link href="/#paketler" className="hover:text-primary transition-colors">Paketler</Link>
-          <Link href="/uzmanlar" className="hover:text-primary transition-colors">Uzmanlar</Link>
           <Link href="/mustakil-ev-maliyeti" className="hover:text-primary transition-colors">Maliyet Hesapla</Link>
           <Link href="/usta-kayit" className="hover:text-primary transition-colors">Usta Ol</Link>
         </div>
@@ -44,7 +43,7 @@ export function Navbar() {
                 <ChevronDown size={14} />
               </button>
               {userMenuOpen && (
-                <div className="absolute right-0 top-full mt-1 w-48 bg-white border border-border rounded-xl shadow-modal py-1 z-50">
+                <div className="absolute right-0 top-full mt-1 w-52 bg-white border border-border rounded-xl shadow-modal py-1 z-50">
                   <Link href="/dashboard" onClick={() => setUserMenuOpen(false)}
                     className="flex items-center gap-2 px-4 py-2.5 text-sm hover:bg-surface transition-colors">
                     <LayoutDashboard size={14} /> Dashboard
@@ -53,12 +52,15 @@ export function Navbar() {
                     className="flex items-center gap-2 px-4 py-2.5 text-sm hover:bg-surface transition-colors">
                     <Wrench size={14} /> Usta Kayıt
                   </Link>
-                  {user.role === 'ADMIN' && (
-                    <Link href="/admin" onClick={() => setUserMenuOpen(false)}
-                      className="flex items-center gap-2 px-4 py-2.5 text-sm hover:bg-surface text-primary font-medium transition-colors">
-                      <LayoutDashboard size={14} /> Admin Panel
-                    </Link>
-                  )}
+                  <Link href="/proje/yeni" onClick={() => setUserMenuOpen(false)}
+                    className="flex items-center gap-2 px-4 py-2.5 text-sm hover:bg-surface transition-colors">
+                    <LayoutDashboard size={14} /> Yeni Proje
+                  </Link>
+                  <div className="border-t border-border my-1" />
+                  <Link href="/admin" onClick={() => setUserMenuOpen(false)}
+                    className="flex items-center gap-2 px-4 py-2.5 text-sm hover:bg-surface text-primary font-medium transition-colors">
+                    <Shield size={14} /> Admin Panel
+                  </Link>
                   <div className="border-t border-border my-1" />
                   <button onClick={handleLogout}
                     className="w-full flex items-center gap-2 px-4 py-2.5 text-sm text-red-500 hover:bg-red-50 transition-colors">
@@ -84,13 +86,13 @@ export function Navbar() {
         <div className="md:hidden border-t border-border bg-white px-6 py-4 flex flex-col gap-3">
           <Link href="/#nasil-calisir" className="text-sm font-medium py-2">Nasıl Çalışır</Link>
           <Link href="/#paketler" className="text-sm font-medium py-2">Paketler</Link>
-          <Link href="/uzmanlar" className="text-sm font-medium py-2">Uzmanlar</Link>
           <Link href="/mustakil-ev-maliyeti" className="text-sm font-medium py-2">Maliyet Hesapla</Link>
           <Link href="/usta-kayit" className="text-sm font-medium py-2">Usta Ol</Link>
           <div className="border-t border-border pt-3 flex flex-col gap-2">
             {user ? (
               <>
                 <Link href="/dashboard" className="btn-ghost text-sm text-center">Dashboard</Link>
+                <Link href="/admin" className="text-sm text-center text-primary font-medium py-2">Admin Panel</Link>
                 <button onClick={handleLogout} className="btn-ghost text-sm text-red-500">Çıkış Yap</button>
               </>
             ) : (
