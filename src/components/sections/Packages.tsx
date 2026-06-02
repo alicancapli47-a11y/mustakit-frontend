@@ -2,91 +2,62 @@
 import Link from 'next/link'
 import { Check } from 'lucide-react'
 
-const packages = [
-  {
-    name: 'Kendin Yönet',
-    sub: 'Platform + eşleştirme',
-    price: '500',
-    commission: '%2 komisyon',
-    featured: false,
-    features: [
-      'Usta & mimar profilleri',
-      'Teklif sistemi',
-      'Escrow ödeme güvencesi',
-      'AI fiyat tahmini',
-      'Belge yükleme',
-      'Platform içi mesajlaşma',
-    ],
-  },
-  {
-    name: 'Yanında Olalım',
-    sub: 'Platform + AI takip + danışmanlık',
-    price: '1.500',
-    commission: '%3 komisyon',
-    featured: true,
-    features: [
-      'Temel paketteki her şey',
-      'AI süreç takibi',
-      'Fotoğraf denetimi',
-      'Gecikme & anomali uyarısı',
-      'Telefon danışmanlığı',
-      'Haftalık özet rapor',
-    ],
-  },
-  {
-    name: 'Biz Halledelim',
-    sub: 'Baştan sona tam yönetim',
-    price: '3.000',
-    commission: '%5 komisyon',
-    featured: false,
-    features: [
-      'Orta paketteki her şey',
-      'Özel proje danışmanı',
-      'Usta koordinasyonu',
-      'Malzeme takibi',
-      'Haftalık ilerleme raporu',
-      'Öncelikli destek',
-    ],
-  },
+const features = [
+  'Onaylı mimar ve usta profilleri',
+  'Teklif sistemi — birden fazla teklif al',
+  'Escrow güvenli ödeme sistemi',
+  'AI maliyet tahmini ve süreç takibi',
+  'Fotoğraf denetimi ve aşama onayı',
+  'Belge yükleme ve arşivleme',
+  'Platform içi mesajlaşma',
+  'Gecikme ve anomali uyarıları',
 ]
 
 export function Packages() {
   return (
     <section id="paketler" className="py-20 px-6 bg-white">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <span className="text-xs font-bold uppercase tracking-widest text-primary">Paketler</span>
-          <h2 className="font-head text-3xl md:text-4xl font-extrabold mt-2 tracking-tight">İhtiyacına göre seç</h2>
-          <p className="text-muted text-sm mt-3">İstediğin zaman paketini değiştirebilirsin.</p>
+          <span className="text-xs font-bold uppercase tracking-widest text-primary">Nasıl Çalışır</span>
+          <h2 className="font-head text-3xl md:text-4xl font-extrabold mt-2 tracking-tight">
+            Üyelik ücretsiz
+          </h2>
+          <p className="text-muted text-sm mt-3 max-w-lg mx-auto">
+            Müstakit'e kayıt olmak ve uzman bulmak tamamen ücretsiz. 
+            Sadece usta ile anlaşıp ilk aşamayı başlattığınızda küçük bir platform ücreti alınır.
+          </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {packages.map((pkg, i) => (
-            <div key={i} className={`relative rounded-2xl border p-7 flex flex-col ${pkg.featured ? 'border-primary bg-primary/5 shadow-card-hover' : 'border-border bg-white shadow-card'}`}>
-              {pkg.featured && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wide whitespace-nowrap">
-                  En Popüler
-                </div>
-              )}
-              <div>
-                <h3 className="font-head font-extrabold text-lg mb-1">{pkg.name}</h3>
-                <p className="text-muted text-xs mb-5">{pkg.sub}</p>
-                <div className="font-head text-3xl font-extrabold text-primary mb-1">
-                  {pkg.price} TL <span className="text-sm font-normal text-muted font-body">/ ay</span>
-                </div>
-                <div className="text-xs text-green-600 font-semibold mb-6">+ {pkg.commission}</div>
-                <ul className="flex flex-col gap-3 mb-8">
-                  {pkg.features.map((f, j) => (
-                    <li key={j} className="flex items-start gap-2 text-sm text-gray-700">
-                      <Check size={14} className="text-green-500 mt-0.5 shrink-0" />{f}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <Link href="/giris" className={`w-full py-3 rounded-lg font-semibold text-sm transition-colors text-center block ${pkg.featured ? 'bg-primary text-white hover:bg-orange-600' : 'border border-border text-gray-700 hover:bg-surface'}`}>
-                Bu Paketi Seç
-              </Link>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          {/* Sol - özellikler */}
+          <div>
+            <div className="text-sm font-semibold text-gray-700 mb-4">Platforma dahil olan her şey:</div>
+            <ul className="flex flex-col gap-3">
+              {features.map((f, i) => (
+                <li key={i} className="flex items-start gap-3 text-sm text-gray-700">
+                  <Check size={16} className="text-green-500 mt-0.5 shrink-0" />
+                  {f}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Sağ - fiyat kartı */}
+          <div className="bg-primary/5 border-2 border-primary rounded-2xl p-8 text-center">
+            <div className="font-head font-extrabold text-5xl text-primary mb-2">Ücretsiz</div>
+            <div className="text-muted text-sm mb-6">Kayıt ve uzman arama</div>
+
+            <div className="border-t border-primary/20 pt-6 mb-6">
+              <div className="text-xs font-bold uppercase tracking-wide text-muted mb-3">Sadece iş başladığında</div>
+              <div className="font-head font-extrabold text-3xl text-primary mb-1">500 TL</div>
+              <div className="text-muted text-xs">İlk aşama başlatma ücreti · Tek seferlik</div>
             </div>
-          ))}
+
+            <Link href="/giris" className="block w-full bg-primary text-white font-semibold py-3 rounded-xl hover:bg-orange-600 transition-colors text-sm">
+              Hemen Başla — Ücretsiz
+            </Link>
+            <p className="text-xs text-muted mt-3">Kredi kartı gerekmez</p>
+          </div>
         </div>
       </div>
     </section>
