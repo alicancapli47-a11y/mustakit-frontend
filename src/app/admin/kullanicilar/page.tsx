@@ -1,12 +1,13 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { Search, Loader2, RefreshCw } from 'lucide-react'
+import { Search, Loader2, RefreshCw, Trash2 } from 'lucide-react'
 
 export default function KullanicilarPage() {
   const [users, setUsers] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
   const [total, setTotal] = useState(0)
+  const [deletingId, setDeletingId] = useState<string | null>(null)
 
   const API = process.env.NEXT_PUBLIC_API_URL
 
@@ -20,6 +21,20 @@ export default function KullanicilarPage() {
       setTotal(data.total || 0)
     } catch (e) { console.error(e) }
     finally { setLoading(false) }
+  }
+
+  const deleteUser = async (id: string, name: string) => {
+    if (!confirm(`${name} kullanıcısını silmek istediğinize emin misiniz?`)) return
+    setDeletingId(id)
+    try {
+      await fetch(`${API}/admin/users/${id}`, {
+        method: 'DELETE',
+        headers: { 'x-admin-key': 'mustakit_admin_2025' }
+      })
+      setUsers(prev => prev.filter(u => u.id !== id))
+      setTotal(prev => prev - 1)
+    } catch (e) { console.error(e) }
+    finally { setDeletingId(null) }
   }
 
   useEffect(() => { fetchUsers() }, [])
@@ -60,6 +75,7 @@ export default function KullanicilarPage() {
                 <th className="text-left px-5 py-3 text-xs font-bold text-muted uppercase tracking-wide">Şehir</th>
                 <th className="text-left px-5 py-3 text-xs font-bold text-muted uppercase tracking-wide">Kayıt</th>
                 <th className="text-left px-5 py-3 text-xs font-bold text-muted uppercase tracking-wide">Durum</th>
+                <th className="text-left px-5 py-3 text-xs font-bold text-muted uppercase tracking-wide">İşlem</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-border">
@@ -83,6 +99,15 @@ export default function KullanicilarPage() {
                       {u.emailVerified ? 'Onaylı' : 'Bekliyor'}
                     </span>
                   </td>
+                  <td className="px-5 py-3.5">
+                    <button
+                      onClick={() => deleteUser(u.id, u.name || u.email)}
+                      disabled={deletingId === u.id}
+                      className="p-1.5 text-red-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors disabled:opacity-50"
+                    >
+                      {deletingId === u.id ? <Loader2 size={14} className="animate-spin" /> : <Trash2 size={14} />}
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -95,3 +120,12 @@ export default function KullanicilarPage() {
     </div>
   )
 }
+// NOT: Backend admin.ts dosyasına şu endpoint'i ekle:
+// router.delete('/users/:id', adminAuth, async (req, res) => {
+//   try {
+//     await prisma.user.delete({ where: { id: req.params.id } })
+//     res.json({ success: true })
+//   } catch (error) {
+//     res.status(500).json({ error: 'Silinemedi' })
+//   }
+// })
