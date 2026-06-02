@@ -1,8 +1,8 @@
 'use client'
-import { useState, Suspense } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { Eye, EyeOff, CheckCircle, XCircle } from 'lucide-react'
+import { Eye, EyeOff, CheckCircle, XCircle, Loader2 } from 'lucide-react'
 
 function SifreSifirlaContent() {
   const params = useSearchParams()
@@ -11,8 +11,26 @@ function SifreSifirlaContent() {
   const [confirm, setConfirm] = useState('')
   const [showPass, setShowPass] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [validating, setValidating] = useState(true)
+  const [tokenValid, setTokenValid] = useState(false)
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState('')
+
+  // Token'ı backend'de doğrula
+  useEffect(() => {
+    if (!token) { setValidating(false); return }
+
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/email-auth/validate-reset-token?token=${token}`)
+      .then(r => r.json())
+      .then(data => {
+        setTokenValid(data.valid === true)
+        setValidating(false)
+      })
+      .catch(() => {
+        setTokenValid(false)
+        setValidating(false)
+      })
+  }, [token])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -36,11 +54,20 @@ function SifreSifirlaContent() {
     }
   }
 
-  if (!token) return (
+  if (validating) return (
+    <div className="text-center py-8">
+      <Loader2 size={32} className="animate-spin text-primary mx-auto mb-3" />
+      <p className="text-muted text-sm">Link doğrulanıyor...</p>
+    </div>
+  )
+
+  if (!token || !tokenValid) return (
     <div className="text-center">
       <XCircle size={48} className="text-red-500 mx-auto mb-4" />
-      <h2 className="font-head font-bold text-lg mb-2">Geçersiz link</h2>
-      <p className="text-muted text-sm mb-4">Bu şifre sıfırlama linki geçersiz veya süresi dolmuş.</p>
+      <h2 className="font-head font-bold text-lg mb-2">Geçersiz veya süresi dolmuş link</h2>
+      <p className="text-muted text-sm mb-6">
+        Bu şifre sıfırlama linki geçersiz veya 1 saatlik süresi dolmuş olabilir.
+      </p>
       <Link href="/sifremi-unuttum" className="btn-primary inline-block">Yeni Link İste</Link>
     </div>
   )
@@ -58,11 +85,9 @@ function SifreSifirlaContent() {
     <>
       <h1 className="font-head font-bold text-lg mb-1">Yeni Şifre Belirle</h1>
       <p className="text-muted text-xs mb-6">En az 8 karakter kullanın</p>
-
       {error && (
         <div className="bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3 rounded-lg mb-4">{error}</div>
       )}
-
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <div>
           <label className="text-xs font-semibold text-gray-600 mb-1.5 block">Yeni Şifre</label>
@@ -86,7 +111,6 @@ function SifreSifirlaContent() {
           {loading ? 'Güncelleniyor...' : 'Şifreyi Güncelle'}
         </button>
       </form>
-
       <div className="mt-4 text-center">
         <Link href="/giris" className="text-xs text-muted hover:text-primary">Giriş sayfasına dön</Link>
       </div>
@@ -101,7 +125,7 @@ export default function SifreSifirlaPage() {
         <div className="text-center mb-6">
           <Link href="/" className="font-head font-extrabold text-xl text-primary">Müstakit</Link>
         </div>
-        <Suspense fallback={<div className="text-center text-muted text-sm">Yükleniyor...</div>}>
+        <Suspense fallback={<div className="text-center text-muted text-sm py-8">Yükleniyor...</div>}>
           <SifreSifirlaContent />
         </Suspense>
       </div>
