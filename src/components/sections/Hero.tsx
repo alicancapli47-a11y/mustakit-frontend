@@ -5,10 +5,10 @@ import Link from 'next/link'
 const slides = [
   {
     img: '/images/slide1.jpeg',
-    badge: '🏗️ Müstakil ev yaptırmanın yeni yolu',
-    title: 'Tekele değil,',
-    highlight: 'ustana güven.',
-    desc: 'Müstakil evinizi yaptırmanın en şeffaf yolu. Mimar, usta ve malzemeciye aracısız ulaşın.'
+    badge: '🏗️ Güvenli inşaat, şeffaf süreç',
+    title: 'Hayalinizdeki arsaya',
+    highlight: 'hayalinizdeki evi yaptırın.',
+    desc: 'Müstakil ev yaptırmanın en güvenli yolu. Mimar, usta ve malzemeciye aracısız ulaşın.',
   },
   {
     img: '/images/slide2.jpeg',
@@ -19,17 +19,17 @@ const slides = [
   },
   {
     img: '/images/slide3.jpeg',
-    badge: '👷 Güvenilir ustalar',
-    title: 'İşini bilen',
-    highlight: 'ellere teslim et.',
-    desc: 'Tüm ustalar kimlik doğrulamalı, referanslı ve Müstakit güvencesi altında.',
+    badge: '👷 Onaylı ve güvenilir ustalar',
+    title: 'İşini bilen ellere,',
+    highlight: 'güvenli ödemeyle.',
+    desc: 'Tüm ustalar kimlik doğrulamalı ve referanslı. Escrow sistemiyle paranız güvende.',
   },
   {
     img: '/images/slide4.jpeg',
     badge: '🏠 Hayaller gerçek olur',
     title: 'Evin hazır,',
     highlight: 'ailen mutlu.',
-    desc: 'Yüzlerce aile Müstakit ile evlerini yaptırdı. Sıra sende.',
+    desc: 'Müstakit ile evinizi şeffaf, güvenli ve aracısız yaptırın. Sıra sizde.',
   },
 ]
 
