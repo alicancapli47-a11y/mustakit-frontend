@@ -129,6 +129,26 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section style={{ padding: "60px 24px", borderTop: "1px solid #E0D9D0" }}>
+        <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
+          <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 22, fontWeight: 800, marginBottom: 28 }}>Daha Fazla Bilgi</div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
+            <Link href="/arsa-video" style={{ textDecoration: "none", border: "1px solid #E0D9D0", borderRadius: 12, padding: 20, display: "block" }}>
+              <div style={{ fontSize: 24, marginBottom: 8 }}>🏞️</div>
+              <div style={{ fontSize: 13, fontWeight: 700, color: "#1a1a1a" }}>Neden Arsa Videosu Gerekli?</div>
+            </Link>
+            <Link href="/insaat-proje-video" style={{ textDecoration: "none", border: "1px solid #E0D9D0", borderRadius: 12, padding: 20, display: "block" }}>
+              <div style={{ fontSize: 24, marginBottom: 8 }}>🏗️</div>
+              <div style={{ fontSize: 13, fontWeight: 700, color: "#1a1a1a" }}>Neden Proje Videosu Gerekli?</div>
+            </Link>
+            <Link href="/iletisim" style={{ textDecoration: "none", border: "1px solid #E0D9D0", borderRadius: 12, padding: 20, display: "block" }}>
+              <div style={{ fontSize: 24, marginBottom: 8 }}>✉️</div>
+              <div style={{ fontSize: 13, fontWeight: 700, color: "#1a1a1a" }}>İletişim</div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <footer style={{ background: "#1a1a1a", color: "rgba(255,255,255,0.5)", textAlign: "center", padding: "28px 24px", fontSize: 13 }}>
         <p>© 2025 Müstakit - Müstakil evinizi yaptırmanın en şeffaf yolu</p>
         <p style={{ marginTop: 8 }}>studio.mustakit.com - Profesyonel Video Servisi</p>
