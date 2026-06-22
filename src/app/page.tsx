@@ -2,8 +2,8 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Mustakit Studio - Arsa ve Yapi Projelerinizin Sanal Videolari",
-  description: "Emlakcilar, arsa sahipleri ve muteahhitler icin profesyonel tanitim videosu. 1-2 is gunu teslim.",
+  title: "Müstakit Studio - Arsa ve Yapı Projelerinizin Sanal Videoları",
+  description: "Emlakçılar, arsa sahipleri ve müteahhitler için profesyonel tanıtım videosu. 1-2 iş günü teslim.",
 }
 
 export default function HomePage() {
@@ -12,7 +12,7 @@ export default function HomePage() {
       <nav style={{ borderBottom: "1px solid #E0D9D0" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 24px", height: 64, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <span style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 800, fontSize: 20, color: "#F26419" }}>
-            Mustakit <span style={{ color: "#1a1a1a", fontWeight: 400, fontSize: 14 }}>Studio</span>
+            Müstakit <span style={{ color: "#1a1a1a", fontWeight: 400, fontSize: 14 }}>Studio</span>
           </span>
           <span style={{ background: "#F26419", color: "white", fontSize: 11, fontWeight: 700, padding: "4px 12px", borderRadius: 20 }}>
             Profesyonel Video
@@ -25,30 +25,30 @@ export default function HomePage() {
           Profesyonel Video Servisi
         </div>
         <h1 style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "clamp(28px, 5vw, 48px)", fontWeight: 800, lineHeight: 1.1, letterSpacing: -1, marginBottom: 16 }}>
-          Arsa ve Yapi Projelerinizin <span style={{ color: "#F26419" }}>Sanal Videolari</span>
+          Arsa ve Yapı Projelerinizin <span style={{ color: "#F26419" }}>Sanal Videoları</span>
         </h1>
         <p style={{ fontSize: 17, color: "rgba(255,255,255,0.75)", maxWidth: 560, margin: "0 auto 40px", lineHeight: 1.7 }}>
-          Arsanizi veya yapi projenizi profesyonel video ile tanitin. 1-2 is gunu icinde teslim.
+          Arsanızı veya yapı projenizi profesyonel video ile tanıtın. 1-2 iş günü içinde teslim.
         </p>
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, maxWidth: 700, margin: "0 auto" }}>
           <Link href="https://studio.mustakit.com" style={{ textDecoration: "none", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: 16, padding: 28, textAlign: "left", display: "block" }}>
-            <div style={{ fontSize: 32, marginBottom: 12 }}>{"\u{1F3D6}"}</div>
+            <div style={{ fontSize: 32, marginBottom: 12 }}>🏞️</div>
             <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 18, fontWeight: 800, color: "white", marginBottom: 6 }}>Arsa Videosu</div>
-            <div style={{ fontSize: 13, color: "rgba(255,255,255,0.6)", marginBottom: 14, lineHeight: 1.5 }}>Emlakcilar ve arsa sahipleri icin tanitim videosu</div>
+            <div style={{ fontSize: 13, color: "rgba(255,255,255,0.6)", marginBottom: 14, lineHeight: 1.5 }}>Emlakçılar ve arsa sahipleri için tanıtım videosu</div>
             <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 24, fontWeight: 800, color: "#F26419" }}>2.500 TL</div>
             <div style={{ marginTop: 14, background: "#F26419", color: "white", textAlign: "center", padding: "10px 0", borderRadius: 8, fontSize: 14, fontWeight: 700 }}>
-              Siparis Ver
+              Sipariş Ver
             </div>
           </Link>
 
           <Link href="https://studio.mustakit.com/yapi-projesi" style={{ textDecoration: "none", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: 16, padding: 28, textAlign: "left", display: "block" }}>
-            <div style={{ fontSize: 32, marginBottom: 12 }}>{"\u{1F3D7}"}</div>
-            <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 18, fontWeight: 800, color: "white", marginBottom: 6 }}>Yapi Projesi Videosu</div>
-            <div style={{ fontSize: 13, color: "rgba(255,255,255,0.6)", marginBottom: 14, lineHeight: 1.5 }}>Muteahhitler icin kroki/plan tabanli proje videosu</div>
+            <div style={{ fontSize: 32, marginBottom: 12 }}>🏗️</div>
+            <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 18, fontWeight: 800, color: "white", marginBottom: 6 }}>Yapı Projesi Videosu</div>
+            <div style={{ fontSize: 13, color: "rgba(255,255,255,0.6)", marginBottom: 14, lineHeight: 1.5 }}>Müteahhitler için kroki/plan tabanlı proje videosu</div>
             <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 24, fontWeight: 800, color: "#F26419" }}>3.000 TL</div>
             <div style={{ marginTop: 14, background: "#F26419", color: "white", textAlign: "center", padding: "10px 0", borderRadius: 8, fontSize: 14, fontWeight: 700 }}>
-              Siparis Ver
+              Sipariş Ver
             </div>
           </Link>
         </div>
@@ -56,28 +56,28 @@ export default function HomePage() {
 
       <section style={{ padding: "80px 24px" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <div style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: "#F26419", marginBottom: 10 }}>Nasil Calisir</div>
-          <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "clamp(22px, 4vw, 34px)", fontWeight: 800, letterSpacing: -0.5, marginBottom: 40 }}>4 adimda videonuz hazir</div>
+          <div style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: "#F26419", marginBottom: 10 }}>Nasıl Çalışır</div>
+          <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "clamp(22px, 4vw, 34px)", fontWeight: 800, letterSpacing: -0.5, marginBottom: 40 }}>4 adımda videonuz hazır</div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 24 }}>
             <div style={{ background: "#F7F4F1", border: "1px solid #E0D9D0", borderRadius: 16, padding: 28 }}>
               <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 40, fontWeight: 800, color: "#E0D9D0", lineHeight: 1, marginBottom: 16 }}>01</div>
-              <div style={{ fontWeight: 700, fontSize: 15, marginBottom: 8 }}>Hizmet Secin</div>
-              <div style={{ fontSize: 13, color: "#777", lineHeight: 1.6 }}>Arsa videosu mu yapi projesi videosu mu istediginizi secin.</div>
+              <div style={{ fontWeight: 700, fontSize: 15, marginBottom: 8 }}>Hizmet Seçin</div>
+              <div style={{ fontSize: 13, color: "#777", lineHeight: 1.6 }}>Arsa videosu mu yapı projesi videosu mu istediğinizi seçin.</div>
             </div>
             <div style={{ background: "#F7F4F1", border: "1px solid #E0D9D0", borderRadius: 16, padding: 28 }}>
               <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 40, fontWeight: 800, color: "#E0D9D0", lineHeight: 1, marginBottom: 16 }}>02</div>
-              <div style={{ fontWeight: 700, fontSize: 15, marginBottom: 8 }}>Bilgi ve Gorsel Yukleyin</div>
-              <div style={{ fontSize: 13, color: "#777", lineHeight: 1.6 }}>Fotograf, kroki veya plan yukleyin. Detayli aciklama ekleyin.</div>
+              <div style={{ fontWeight: 700, fontSize: 15, marginBottom: 8 }}>Bilgi ve Görsel Yükleyin</div>
+              <div style={{ fontSize: 13, color: "#777", lineHeight: 1.6 }}>Fotoğraf, kroki veya plan yükleyin. Detaylı açıklama ekleyin.</div>
             </div>
             <div style={{ background: "#F7F4F1", border: "1px solid #E0D9D0", borderRadius: 16, padding: 28 }}>
               <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 40, fontWeight: 800, color: "#E0D9D0", lineHeight: 1, marginBottom: 16 }}>03</div>
-              <div style={{ fontWeight: 700, fontSize: 15, marginBottom: 8 }}>%20 Odeyin</div>
-              <div style={{ fontSize: 13, color: "#777", lineHeight: 1.6 }}>Siparis onayi icin on odeme yapin. Kalani teslimde odersiniz.</div>
+              <div style={{ fontWeight: 700, fontSize: 15, marginBottom: 8 }}>%20 Ödeyin</div>
+              <div style={{ fontSize: 13, color: "#777", lineHeight: 1.6 }}>Sipariş onayı için ön ödeme yapın. Kalanı teslimde ödersiniz.</div>
             </div>
             <div style={{ background: "#F7F4F1", border: "1px solid #E0D9D0", borderRadius: 16, padding: 28 }}>
               <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 40, fontWeight: 800, color: "#E0D9D0", lineHeight: 1, marginBottom: 16 }}>04</div>
-              <div style={{ fontWeight: 700, fontSize: 15, marginBottom: 8 }}>Videonuzu Alin</div>
-              <div style={{ fontSize: 13, color: "#777", lineHeight: 1.6 }}>1-2 is gunu icinde profesyonel video e-posta ile teslim edilir.</div>
+              <div style={{ fontWeight: 700, fontSize: 15, marginBottom: 8 }}>Videonuzu Alın</div>
+              <div style={{ fontSize: 13, color: "#777", lineHeight: 1.6 }}>1-2 iş günü içinde profesyonel video e-posta ile teslim edilir.</div>
             </div>
           </div>
         </div>
@@ -86,8 +86,8 @@ export default function HomePage() {
       <section style={{ background: "#F7F4F1", padding: "80px 24px" }}>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
-            <div style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: "#F26419", marginBottom: 10 }}>Fiyatlandirma</div>
-            <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "clamp(22px, 4vw, 34px)", fontWeight: 800 }}>Iki Hizmet, Seffaf Fiyat</div>
+            <div style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: "#F26419", marginBottom: 10 }}>Fiyatlandırma</div>
+            <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: "clamp(22px, 4vw, 34px)", fontWeight: 800 }}>İki Hizmet, Şeffaf Fiyat</div>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
             <div style={{ border: "2px solid #F26419", borderRadius: 24, overflow: "hidden", background: "white" }}>
@@ -97,31 +97,31 @@ export default function HomePage() {
               </div>
               <div style={{ padding: 24 }}>
                 <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 10, marginBottom: 20, fontSize: 13, color: "#333" }}>
-                  <li>+ Arsa fotograflari ile video</li>
-                  <li>+ Konum ve ozellik anlatimi</li>
+                  <li>+ Arsa fotoğrafları ile video</li>
+                  <li>+ Konum ve özellik anlatımı</li>
                   <li>+ 30-60 saniye HD video</li>
-                  <li>+ 1 revizyon hakki</li>
+                  <li>+ 1 revizyon hakkı</li>
                 </ul>
                 <Link href="https://studio.mustakit.com" style={{ display: "block", width: "100%", background: "#F26419", color: "white", fontWeight: 700, padding: 14, borderRadius: 10, textDecoration: "none", textAlign: "center", fontSize: 14 }}>
-                  Siparis Ver
+                  Sipariş Ver
                 </Link>
               </div>
             </div>
 
             <div style={{ border: "2px solid #1a1a1a", borderRadius: 24, overflow: "hidden", background: "white" }}>
               <div style={{ background: "#1a1a1a", color: "white", padding: 28, textAlign: "center" }}>
-                <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 18, fontWeight: 800, marginBottom: 6 }}>Yapi Projesi Videosu</div>
+                <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 18, fontWeight: 800, marginBottom: 6 }}>Yapı Projesi Videosu</div>
                 <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 40, fontWeight: 800 }}>3.000 <span style={{ fontSize: 16, fontWeight: 400, opacity: 0.8 }}>TL</span></div>
               </div>
               <div style={{ padding: 24 }}>
                 <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 10, marginBottom: 20, fontSize: 13, color: "#333" }}>
-                  <li>+ Kroki/plan tabanli gorsellestirme</li>
-                  <li>+ Muteahhitler icin ozel format</li>
-                  <li>+ Proje anlatim metni</li>
-                  <li>+ 1 revizyon hakki</li>
+                  <li>+ Kroki/plan tabanlı görselleştirme</li>
+                  <li>+ Müteahhitler için özel format</li>
+                  <li>+ Proje anlatım metni</li>
+                  <li>+ 1 revizyon hakkı</li>
                 </ul>
                 <Link href="https://studio.mustakit.com/yapi-projesi" style={{ display: "block", width: "100%", background: "#1a1a1a", color: "white", fontWeight: 700, padding: 14, borderRadius: 10, textDecoration: "none", textAlign: "center", fontSize: 14 }}>
-                  Siparis Ver
+                  Sipariş Ver
                 </Link>
               </div>
             </div>
@@ -130,7 +130,7 @@ export default function HomePage() {
       </section>
 
       <footer style={{ background: "#1a1a1a", color: "rgba(255,255,255,0.5)", textAlign: "center", padding: "28px 24px", fontSize: 13 }}>
-        <p>2025 Mustakit - Mustakil evinizi yaptirmanin en seffaf yolu</p>
+        <p>© 2025 Müstakit - Müstakil evinizi yaptırmanın en şeffaf yolu</p>
         <p style={{ marginTop: 8 }}>studio.mustakit.com - Profesyonel Video Servisi</p>
       </footer>
     </main>
