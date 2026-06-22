@@ -1,14 +1,14 @@
-﻿import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata } from "next"
+import "./globals.css"
 
 export const metadata: Metadata = {
-  title: 'Müstakit — Hayalinizdeki Müstakil Evi Yaptırmanın Güvenli Yolu',
-  description: 'Müstakil ev yaptırmanın en güvenli ve şeffaf yolu. Mimar, usta ve malzemeciye aracısız ulaşın.',
-  keywords: 'müstakil ev, ev yaptırma, usta bul, mimar, inşaat, Türkiye',
+  title: "Sanal Arsa ve İnşaat Proje Tanıtım Video Hizmeti | Müstakit",
+  description: "Arsanız veya inşaat projeniz için profesyonel tanıtım videosu. Emlakçılar ve müteahhitler için 1-2 iş günü teslim. Müstakil ev yaptırmanın en şeffaf yolu.",
+  keywords: "arsa tanıtım videosu, inşaat proje videosu, emlak videosu, müteahhit videosu, sanal tur, müstakil ev, ev yaptırma",
   openGraph: {
-    title: 'Müstakit — Hayalinizdeki Müstakil Evi Yaptırmanın Güvenli Yolu',
-    description: 'Müstakil ev yaptırmanın en güvenli ve şeffaf yolu.',
-    type: 'website',
+    title: "Sanal Arsa ve İnşaat Proje Tanıtım Video Hizmeti | Müstakit",
+    description: "Arsanız veya inşaat projeniz için profesyonel tanıtım videosu.",
+    type: "website",
   },
 }
 
