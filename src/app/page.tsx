@@ -64,6 +64,7 @@ export default function HomePage() {
             </div>
           </Link>
         </div>
+        </div>
       </div>
 
       <section style={{ padding: "80px 24px" }}>
