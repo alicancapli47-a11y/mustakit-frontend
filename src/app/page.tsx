@@ -20,7 +20,19 @@ export default function HomePage() {
         </div>
       </nav>
 
-      <div style={{ background: "linear-gradient(135deg, #1a1a1a 0%, #2d1f0e 100%)", color: "white", padding: "80px 24px", textAlign: "center" }}>
+      <div style={{ position: "relative", color: "white", padding: "80px 24px", textAlign: "center", overflow: "hidden" }}>
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, #1a1a1a 0%, #2d1f0e 100%)", zIndex: 0 }} />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.5, zIndex: 1 }}
+        >
+          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+        </video>
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(26,26,26,0.7) 0%, rgba(45,31,14,0.7) 100%)", zIndex: 2 }} />
+        <div style={{ position: "relative", zIndex: 3 }}>
         <div style={{ display: "inline-block", background: "rgba(242,100,25,0.2)", border: "1px solid rgba(242,100,25,0.5)", color: "#F26419", fontSize: 12, fontWeight: 600, padding: "6px 16px", borderRadius: 20, marginBottom: 24 }}>
           Profesyonel Video Servisi
         </div>
