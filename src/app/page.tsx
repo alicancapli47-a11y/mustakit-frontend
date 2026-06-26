@@ -163,7 +163,7 @@ export default function HomePage() {
       </section>
 
       <footer style={{ background: "#1a1a1a", color: "rgba(255,255,255,0.5)", textAlign: "center", padding: "28px 24px", fontSize: 13 }}>
-        <p>© 2026 Müstakit - Müstakil Ev İnşaat Arsa Projelerinizin Video Hizmetleri u</p>
+        <p>© 2026 Müstakit - Müstakil Ev İnşaat Arsa Projelerinizin Video Hizmetleri</p>
         <p style={{ marginTop: 8 }}>studio.mustakit.com - Profesyonel Video Servisi</p>
       </footer>
     </main>
