@@ -48,7 +48,7 @@ export default function HomePage() {
             <div style={{ fontSize: 32, marginBottom: 12 }}>🏞️</div>
             <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 18, fontWeight: 800, color: "white", marginBottom: 6 }}>Arsa Videosu</div>
             <div style={{ fontSize: 13, color: "rgba(255,255,255,0.6)", marginBottom: 14, lineHeight: 1.5 }}>Emlakçılar ve arsa sahipleri için tanıtım videosu</div>
-            <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 24, fontWeight: 800, color: "#F26419" }}>2.500 TL</div>
+            <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 24, fontWeight: 800, color: "#F26419" }}>4.000 TL</div>
             <div style={{ marginTop: 14, background: "#F26419", color: "white", textAlign: "center", padding: "10px 0", borderRadius: 8, fontSize: 14, fontWeight: 700 }}>
               Sipariş Ver
             </div>
@@ -58,12 +58,11 @@ export default function HomePage() {
             <div style={{ fontSize: 32, marginBottom: 12 }}>🏗️</div>
             <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 18, fontWeight: 800, color: "white", marginBottom: 6 }}>Yapı Projesi Videosu</div>
             <div style={{ fontSize: 13, color: "rgba(255,255,255,0.6)", marginBottom: 14, lineHeight: 1.5 }}>Müteahhitler için kroki/plan tabanlı proje videosu</div>
-            <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 24, fontWeight: 800, color: "#F26419" }}>3.000 TL</div>
+            <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 24, fontWeight: 800, color: "#F26419" }}>5.000 TL</div>
             <div style={{ marginTop: 14, background: "#F26419", color: "white", textAlign: "center", padding: "10px 0", borderRadius: 8, fontSize: 14, fontWeight: 700 }}>
               Sipariş Ver
             </div>
           </Link>
-        </div>
         </div>
       </div>
 

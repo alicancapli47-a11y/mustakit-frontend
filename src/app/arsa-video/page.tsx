@@ -98,7 +98,7 @@ export default function ArsaVideoPage() {
             Arsanızı Sanal Drone Video ile Tanıtın
           </h3>
           <p style={{ color: "rgba(255,255,255,0.75)", fontSize: 14, marginBottom: 24, maxWidth: 440, marginLeft: "auto", marginRight: "auto" }}>
-            1-2 iş günü içinde teslim, 2.500 TL sabit fiyat. Profesyonel video ile arsanızı daha hızlı satın.
+            1-2 iş günü içinde teslim, 4.000 TL sabit fiyat. Profesyonel video ile arsanızı daha hızlı satın.
           </p>
           <Link href="https://studio.mustakit.com" style={{ display: "inline-block", background: "#F26419", color: "white", fontWeight: 700, padding: "14px 32px", borderRadius: 10, textDecoration: "none", fontSize: 15 }}>
             Sipariş Ver →

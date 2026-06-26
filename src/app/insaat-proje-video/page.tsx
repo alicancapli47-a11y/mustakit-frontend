@@ -95,7 +95,7 @@ export default function InsaatProjeVideoPage() {
             Projenizi Sanal Video ile Tanıtın
           </h3>
           <p style={{ color: "rgba(255,255,255,0.75)", fontSize: 14, marginBottom: 24, maxWidth: 440, marginLeft: "auto", marginRight: "auto" }}>
-            Kroki ve planlarınızı yükleyin, 1-2 iş günü içinde profesyonel proje videonuz hazır. 3.000 TL sabit fiyat.
+            Kroki ve planlarınızı yükleyin, 1-2 iş günü içinde profesyonel proje videonuz hazır. 5.000 TL sabit fiyat.
           </p>
           <Link href="https://studio.mustakit.com/yapi-projesi" style={{ display: "inline-block", background: "#F26419", color: "white", fontWeight: 700, padding: "14px 32px", borderRadius: 10, textDecoration: "none", fontSize: 15 }}>
             Sipariş Ver →
