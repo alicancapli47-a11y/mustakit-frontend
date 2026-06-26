@@ -105,7 +105,7 @@ export default function HomePage() {
             <div style={{ border: "2px solid #F26419", borderRadius: 24, overflow: "hidden", background: "white" }}>
               <div style={{ background: "#F26419", color: "white", padding: 28, textAlign: "center" }}>
                 <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 18, fontWeight: 800, marginBottom: 6 }}>Arsa Videosu</div>
-                <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 40, fontWeight: 800 }}>2.500 <span style={{ fontSize: 16, fontWeight: 400, opacity: 0.8 }}>TL</span></div>
+                <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 40, fontWeight: 800 }}>4.000 <span style={{ fontSize: 16, fontWeight: 400, opacity: 0.8 }}>TL</span></div>
               </div>
               <div style={{ padding: 24 }}>
                 <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 10, marginBottom: 20, fontSize: 13, color: "#333" }}>
@@ -123,7 +123,7 @@ export default function HomePage() {
             <div style={{ border: "2px solid #1a1a1a", borderRadius: 24, overflow: "hidden", background: "white" }}>
               <div style={{ background: "#1a1a1a", color: "white", padding: 28, textAlign: "center" }}>
                 <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 18, fontWeight: 800, marginBottom: 6 }}>Yapı Projesi Videosu</div>
-                <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 40, fontWeight: 800 }}>3.000 <span style={{ fontSize: 16, fontWeight: 400, opacity: 0.8 }}>TL</span></div>
+                <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 40, fontWeight: 800 }}>5.000 <span style={{ fontSize: 16, fontWeight: 400, opacity: 0.8 }}>TL</span></div>
               </div>
               <div style={{ padding: 24 }}>
                 <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 10, marginBottom: 20, fontSize: 13, color: "#333" }}>
