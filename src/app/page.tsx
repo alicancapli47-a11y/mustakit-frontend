@@ -143,10 +143,11 @@ export default function HomePage() {
               <div style={{ padding: "20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
                 <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 10, marginBottom: 20, flex: 1 }}>
                   <li style={{ fontSize: 13, color: "#333" }}>✓ 30 saniyelik video</li>
-                  <li style={{ fontSize: 13, color: "#333" }}>✓ Temel video kurgu</li>
+                  <li style={{ fontSize: 13, color: "#333" }}>✓ Müzikli kurgu</li>
+                  <li style={{ fontSize: 13, color: "#333" }}>✓ Yazı ve grafikle anlatım</li>
+                  <li style={{ fontSize: 13, color: "#333" }}>✓ Gerçekçi animasyon</li>
                   <li style={{ fontSize: 13, color: "#c44" }}>✕ Seslendirme yok</li>
-                  <li style={{ fontSize: 13, color: "#c44" }}>✕ Gerçekçi animasyon yok</li>
-                  <li style={{ fontSize: 13, color: "#c44" }}>✕ Drone görüntüsü yok</li>
+                  <li style={{ fontSize: 13, color: "#c44" }}>✕ Drone &amp; yapı yerleştirme yok</li>
                 </ul>
                 <button type="button" onClick={() => setSelectedPackage('minimal')}
                   style={{ width: "100%", background: selectedPackage === 'minimal' ? "#F26419" : "#F7F4F1", color: selectedPackage === 'minimal' ? "white" : "#1A1A1A", border: selectedPackage === 'minimal' ? "1px solid #F26419" : "1px solid #E0D9D0", fontWeight: 700, padding: 12, borderRadius: 10, cursor: "pointer", fontSize: 14 }}>
@@ -167,11 +168,12 @@ export default function HomePage() {
               </div>
               <div style={{ padding: "20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
                 <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 10, marginBottom: 20, flex: 1 }}>
-                  <li style={{ fontSize: 13, color: "#333" }}>✓ 30 saniyelik video</li>
-                  <li style={{ fontSize: 13, color: "#333" }}>✓ Profesyonel seslendirme</li>
-                  <li style={{ fontSize: 13, color: "#333" }}>✓ Projenizin gerçekçi animasyonu</li>
-                  <li style={{ fontSize: 13, color: "#333" }}>✓ Gerçekçi drone footage</li>
-                  <li style={{ fontSize: 13, color: "#333" }}>✓ Müzik &amp; ses tasarımı</li>
+                  <li style={{ fontSize: 13, color: "#333" }}>✓ 30-60 saniye arası video</li>
+                  <li style={{ fontSize: 13, color: "#333" }}>✓ Gerçekçi seslendirme ile detaylı anlatım</li>
+                  <li style={{ fontSize: 13, color: "#333" }}>✓ Müzikli kurgu</li>
+                  <li style={{ fontSize: 13, color: "#333" }}>✓ Gerçekçi drone footage (arsa ve yapı)</li>
+                  <li style={{ fontSize: 13, color: "#333" }}>✓ Gerçekçi animasyonlar</li>
+                  <li style={{ fontSize: 13, color: "#333" }}>✓ Yazı ve grafikle anlatım</li>
                 </ul>
                 <button type="button" onClick={() => setSelectedPackage('standart')}
                   style={{ width: "100%", background: selectedPackage === 'standart' ? "#F26419" : "#F7F4F1", color: selectedPackage === 'standart' ? "white" : "#1A1A1A", border: selectedPackage === 'standart' ? "1px solid #F26419" : "1px solid #E0D9D0", fontWeight: 700, padding: 12, borderRadius: 10, cursor: "pointer", fontSize: 14 }}>
