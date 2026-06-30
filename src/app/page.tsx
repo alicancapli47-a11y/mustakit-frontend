@@ -56,7 +56,10 @@ export default function HomePage() {
       setLoading(false)
 
       if (paymentMethod === 'shopier') {
-        setPaymentUrl('https://www.shopier.com/Mustakit/47021980')
+        const shopierUrl = selectedPackage === 'standart'
+          ? 'https://www.shopier.com/Mustakit/47021980'
+          : 'https://www.shopier.com/Mustakit/46435148'
+        setPaymentUrl(shopierUrl)
         setPaymentModalOpen(true)
       } else if (result.checkoutUrl) {
         setPaymentUrl(result.checkoutUrl)
