@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 const packages = {
   minimal: { name: 'Minimalist Paket', price: 1500, label: '1.500 TL' },
-  standart: { name: 'Standart Paket', price: 2000, label: '2.000 TL' },
+  standart: { name: 'Standart Paket', price: 2500, label: '2.500 TL' },
 }
 
 export default function HomePage() {
@@ -165,8 +165,8 @@ export default function HomePage() {
                 <div style={{ fontSize: 16, fontWeight: 800, marginBottom: 4 }}>Standart Paket</div>
                 <div style={{ fontSize: 12, color: "#777", marginBottom: 16, lineHeight: 1.5 }}>Seslendirmeli, gerçekçi animasyon ve drone görüntülü tam prodüksiyon</div>
                 <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
-                  <span style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 30, fontWeight: 800, color: "#F26419" }}>2.000 TL</span>
-                  <span style={{ fontSize: 15, color: "#777", textDecoration: "line-through" }}>2.500 TL</span>
+                  <span style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 30, fontWeight: 800, color: "#F26419" }}>2.500 TL</span>
+                  <span style={{ fontSize: 15, color: "#777", textDecoration: "line-through" }}>3.000 TL</span>
                 </div>
               </div>
               <div style={{ padding: "20px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
