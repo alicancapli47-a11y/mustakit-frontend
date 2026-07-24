@@ -56,9 +56,7 @@ export default function HomePage() {
       setLoading(false)
 
       if (paymentMethod === 'shopier') {
-        const shopierUrl = selectedPackage === 'standart'
-          ? 'https://www.shopier.com/Mustakit/47021980'
-          : 'https://www.shopier.com/Mustakit/46435148'
+        const shopierUrl = 'https://www.shopier.com/Mustakit/48669863'
         setPaymentUrl(shopierUrl)
         setPaymentModalOpen(true)
       } else if (result.checkoutUrl) {
@@ -375,13 +373,13 @@ export default function HomePage() {
               </div>
 
               <div style={{ background: "#fff8f5", border: "1px solid rgba(242,100,25,0.2)", borderRadius: 10, padding: "14px 16px", fontSize: 12, color: "#7a3a10", marginBottom: 20, lineHeight: 1.6 }}>
-                💳 Tek seferlik tam ödeme alınır, ön ödeme yoktur. Ödeme tamamlandıktan sonra videonuz 1-2 iş günü içinde e-posta adresinize teslim edilir.
+                💳 Ön ödeme ile siparişinizi onaylayın, kalan tutarı video tesliminde ödeyin.
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10 }}>
                 <button type="submit" disabled={loading}
                   style={{ width: "100%", background: "#F26419", color: "white", fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 15, fontWeight: 700, padding: 16, borderRadius: 12, border: "none", cursor: loading ? "not-allowed" : "pointer", opacity: loading ? 0.6 : 1 }}>
-                  {loading ? 'Gönderiliyor...' : 'Ödemeye Geç →'}
+                  {loading ? 'Gönderiliyor...' : 'Ön Ödeme Yap →'}
                 </button>
                 <div style={{ fontSize: 11, color: "#777" }}>🔒 Güvenli ödeme · Bilgileriniz korunur</div>
               </div>
